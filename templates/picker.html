@@ -8,46 +8,47 @@
 <body style="background-color:black;"> </body>
 <h2 style="color:#42f551; text-align:center"> <b>Type in a Stock Symbol:</b>
 
-    <!-- This is how to create a form -->
-    <form action = "/picker" method = "POST">
-        <input type = "string" name = "ticker">
-        <button type = "submit"> Submit </button>
-    </form>
+<!-- This is how to create a form -->
+<form action = "/picker" method = "POST">
+    <input type = "string" name = "ticker">
+    <button type = "submit"> Submit </button>
+</form>
 </h2>
 
 <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-    body, html {
-        height: 100%;
-        line-height: 1.8;
-    }
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
 
     .w3-bar .w3-button {
         padding: 16px;
     }
+
 </style>
 <p style="color: #42f551; text-align:center">{{df}} </p>
 
 <table>
     <tr>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">Date</th>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">Open</th>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">High</th>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">Close</th>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">Adj Close</th>
-        <th style="color: #42f551; padding-left: 50px; padding-right: 50px;">Volume</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">Date</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">Open</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">High</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">Close</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">Adj Close</th>
+        <th style="color: #42f551; padding-left: 75px; padding-right: 75px;">Volume</th>
     </tr>
 
     {% for row in every_info %}
-    <!-- {'Date': '2021-05-03', 'Open': 703.799988, 'High': 706.0, 'Close': 684.900024, 'Adj Close': 684.900024, 'Volume': 27043100}-->
+
     <tr>
-        <td style="color: #42f551;">{{row["Date"]}}</td>
-        <td style="color: #42f551;">{{row["Open"]}}</td>
-        <td style="color: #42f551;">{{row["High"]}}</td>
-        <td style="color: #42f551;">{{row["Close"]}}</td>
-        <td style="color: #42f551;">{{row["Adj Close"]}}</td>
-        <td style="color: #42f551;">{{row["Volume"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["Date"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["Open"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["High"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["Close"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["Adj Close"]}}</td>
+        <td style="color: #42f551; padding-left: 75px; padding-right: 75px;">{{row["Volume"]}}</td>
     </tr>
     {% endfor %}
 
